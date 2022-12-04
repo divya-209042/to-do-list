@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS TO DO List</title>
+    <style>
+  *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'poppins', sans-serif;
+  }
+  body{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:rgb(17, 17, 17);
+  }
+  .list{
+    position:relative;
+    background:rgb(255, 255, 255);
+    width:350px;
+  }
+  .list h2{
+    background:#6b03f4;
+    color:rgb(255, 255, 255);
+    padding: 10px 20px;
+    font-weight: 600;
+  }
+  .list ul{
+    position:relative;
+    padding:20px;
+  }
+  .list ul li{
+    position:relative;
+    list-style:none;
+    padding:15px 0;
+    border:1px solid rgba(0, 0, 0, 0.1);
+
+
+
+
+  }
+  .list ul li:last-child{
+    border-bottom:none;
+  }
+  .list ul li label{
+    position:relative;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    cursor:pointer;
+  }
+  .list ul li label input{
+    visibility:hidden;
+    appearance:none;
+  }
+  .list ul li label p{
+    position:absolute;
+  }
+  .list ul li label span{
+    position:relative;
+    width:20px;
+    height:20px;
+    border:1px solid rgb(204, 204, 204);
+    border-radius:50%;
+    display:flex;
+    justify-content:center;
+  }
+  .list ul li label span:before{
+    content:'';
+    position:absolute;
+    top:5px;
+    width:10px;
+    height:5px;
+    border-left:2px solid #ccc;
+    border-bottom:2px solid rgb(204, 204, 204);
+    transform:rotate(-40deg);
+  }
+  .list ul li label input:checked:~ p{
+    text-decoration: line-through;
+    color:#ccc;
+  } 
+  .list ul li label input:checked ~ span{
+    border-left: 2px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(255, 255, 255) ;
+
+  }
+    </style>
+
+</head>
+<body>
+    <div class="list">
+        <h2> TO DO LIST</h2>
+     <ul>
+        <li>
+            <label>
+                <input type="checkbox" name="">
+                <p>BBA</p>
+                <span></span>
+                
+            </label>
+        </li>
+        <li>
+        <label>
+            <input type="checkbox" name="">
+            <p>BCA</p>
+            <span></span>
+        </label>
+    </li>
+    
+    <li>
+        <label>
+            <input type="checkbox" name="">
+            <p>BTECH</p>
+            <span></span>
+        </label>
+    </li>
+    <li>
+        <label>
+            <input type="checkbox" name="">
+            <p>MCA</p>
+            <span></span>
+        </label>
+    </li>
+    <li>
+        <label>
+            <input type="checkbox" name="">
+            <p>MTECH</p>
+            <span></span>
+        </label>
+    </li>
+    <li>
+        <label>
+            <input type="checkbox" name="">
+    <p>OTHERS</p>
+            <span></span>
+        </label>
+    </li>
+     </ul>
+    </div>
+</body>
+</html>
